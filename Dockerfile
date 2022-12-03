@@ -17,6 +17,8 @@ COPY . .
 # RUN ls -a
 ENV PATH="/opt/venv/bin:$PATH"
 
+# WORKDIR = /app
+
 ## Start the uvicorn server and alembic migrations
 # CD to the app folder
 CMD ["sh", "-c" , "uvicorn factory:app --host 0.0.0.0 --port 8000 --reload"]

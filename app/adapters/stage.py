@@ -8,6 +8,6 @@ class StageAdapter(BaseAdapter):
         for i in range(int(math.log(number,2))):
             stage = Stage(tournament_id=tournament_id, level=i)
             self.session.add(stage)
+            self.session.commit()
             ids.append(stage.id)
-        self.session.commit()
         return ids

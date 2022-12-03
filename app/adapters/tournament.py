@@ -7,7 +7,7 @@ from app.models.match import Match
 class TournamentRepository(BaseAdapter):
     def create(self, tournament: TournamentSchema):
         tournament = Tournament(**tournament.dict())
-        tournament.status = "Active"
+        tournament.status = "ACTIVE"
         self.session.add(tournament)
         self.session.commit()
         return tournament.id
