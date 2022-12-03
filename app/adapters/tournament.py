@@ -21,6 +21,7 @@ class TournamentRepository(BaseAdapter):
         tournament1['stages'] = []
         for i in stages:
             stage = i.__dict__
+            print(stage)
             matches = self.session.query(Match).filter(Match.stage_id == stage['id']).all()
             stage['matches'] = []
             for j in matches:
