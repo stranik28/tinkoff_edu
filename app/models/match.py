@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer
+from sqlalchemy import Column, Integer, ForeignKey
 from app.database.base import Base
 
 
@@ -8,4 +8,5 @@ class Match(Base):
     id = Column(Integer, primary_key=True)
     score1 = Column(Integer)
     score2 = Column(Integer)
-
+    team1 = Column(Integer, ForeignKey("team_table.id"))
+    team2 = Column(Integer, ForeignKey("team_table.id"))
