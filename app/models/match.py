@@ -10,4 +10,4 @@ class Match(Base):
     score2 = Column(Integer)
     team1 = Column(Integer, ForeignKey("team_table.id"))
     team2 = Column(Integer, ForeignKey("team_table.id"))
-    stage_id = Column(Integer, ForeignKey("stage_table.level"))
+    stage_id = Column(Integer, ForeignKey("stage_table.id"))

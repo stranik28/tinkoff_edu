@@ -6,6 +6,6 @@ class Stage(Base):
     __tablename__ = "stage_table"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    level = Column(Integer, primary_key=True)
+    level = Column(Integer)
     tournament_id = Column(Integer, ForeignKey('tournament_table.id'))
 
