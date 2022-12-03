@@ -21,4 +21,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 ## Start the uvicorn server and alembic migrations
 # CD to the app folder
-CMD ["sh", "-c" , "uvicorn factory:create_app --host 0.0.0.0 --port 8000 --reload --factory"]
+CMD ["sh", "-c" , "alembic upgrade heads && uvicorn factory:create_app --host 0.0.0.0 --port 8000 --reload --factory"]
