@@ -132,7 +132,7 @@ notes
 src
 
 .main.py
-test.py
+# test.py
 help.py
 
 .cpython
