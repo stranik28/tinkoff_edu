@@ -12,4 +12,7 @@ class TeamAdapter(BaseAdapter):
 
     def get_by_id(self, id: int):
         return self.session.query(Team).filter(Team.id == id).first()
+    
+    def get_all(self):
+        return self.session.query(Team).all()
 

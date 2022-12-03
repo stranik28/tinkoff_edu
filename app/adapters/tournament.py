@@ -29,4 +29,3 @@ class TournamentRepository(BaseAdapter):
                 stage['matches'].append(match)
             tournament1['stages'].append(stage)
         return tournament1
-
