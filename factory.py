@@ -1,11 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.router import router as api_router
 
 app = FastAPI(
-    title="My API",
-    description="My API description",
-    version="0.1.0"
+    title="FastAPI",
+    description="FastAPI",
+    version="0.1.0",
+    openapi_url="/api/v1/openapi.json",
+    docs_url="/docs",
+    redoc_url="/redoc",
 )
+
+app.include_router(api_router)
+
 
 app.add_middleware(
     CORSMiddleware,
